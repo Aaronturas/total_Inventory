@@ -2,24 +2,9 @@
 
 # Make sure it doesn’t produce an error if the item isn’t in the inventory lists (in this case assume the value is 0).
 
-# Example
-
-# Input
-# -----
-# inventory_0 = {"bananas": 2}
-# inventory_1 = {"bananas": 5, "apples": 3}
-# item = "bananas"
-
-# Output
-# ------
-# 7
-
-
-
-# Make sure to test on additional examples!
 inventory_0 = {"bananas": 2}
 inventory_1 = {"bananas": 5, "apples": 3, "pineapples": 2}
-item = "pineapples"
+item = "bananas"
 
 
 def total_inventory(inventory_0, inventory_1, item):
@@ -36,4 +21,10 @@ def total_inventory(inventory_0, inventory_1, item):
     count = inventory_0[item] + inventory_1[item]
     return count
 
-print('Inventory Count:', total_inventory(inventory_0, inventory_1, item))
+print('Inventory Count for', item,':', total_inventory(inventory_0, inventory_1, item))
+
+inventory_0 = {"bananas": 2}
+inventory_1 = {"bananas": 5, "apples": 3, "pineapples": 2}
+item = "apples"
+
+print('Inventory Count for', item,':', total_inventory(inventory_0, inventory_1, item))
